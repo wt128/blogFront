@@ -14,6 +14,6 @@ $ npm start
 #このアプリについて
 名前にもある通り、reactでブログっぽいやつのガワを作りました。
 データベースはmysql
-APIはこちら => https://github.com/wt128/dbapiBygo/
+APIはこちら => https://github.com/wt128/dbapiBygo/ \n
 httpクライアント: axios先生
 
