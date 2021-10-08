@@ -1,5 +1,5 @@
 {
-  "name": "react-todo",
+  "name": "blogFront",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -36,5 +36,6 @@
   "devDependencies": {
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
-  }
+  },
+  "homepage": "."
 }
