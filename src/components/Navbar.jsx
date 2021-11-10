@@ -27,7 +27,7 @@ const Navbar = (props) =>{
     const history = useHistory()
     const logout = useLogout()
     const handleLink = path => history.push(path)
-    
+    const [cookie] = useCookies(["sid"]) 
     const handleLogout = () =>{
         
         alert("ログアウトしました。[Session delete]")    
@@ -49,7 +49,7 @@ const Navbar = (props) =>{
                    ぶろぐ？
                 </Typography>
 
-            { !document.cookie &&
+            { !cookie.sid &&
             <div>
                 <Button color="inherit" onClick={()=>handleLink('/login')}>
                     Login
@@ -61,7 +61,7 @@ const Navbar = (props) =>{
             </div>
             }
             {
-                document.cookie &&
+                cookie.sid &&
                 <>
                 <Button color="inherit" onClick={()=>handleLink('/posts/new')}>
                     Post

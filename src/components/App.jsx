@@ -2,7 +2,6 @@ import React, { useState,useEffect } from 'react'
 import {useCookies} from 'react-cookie'
 import { BrowserRouter as Router, Redirect, Route ,Switch} from "react-router-dom";
 import Form from './New'
-import Show from './Show'
 import Home from './Home'
 import Navbar from './Navbar'
 import Login from './Login'

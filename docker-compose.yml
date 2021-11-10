@@ -17,5 +17,5 @@ services:
         - ./build:/var/www
         - ./nginx/:/etc/nginx/conf.d/
       depends_on:
-        - node    
+        - node 
     

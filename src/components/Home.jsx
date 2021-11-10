@@ -1,11 +1,12 @@
 import React, { useState,useEffect } from 'react';
-import { withCookies } from 'react-cookie';
+import { withCookies, useCookies } from 'react-cookie';
 import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router';
 
 const Home = (props) =>{
     const [uid,setUid] = useState(0)
     const histroy = useHistory()
+    const [cookie] = useCookies(["sid"])
     const handleLink = path => histroy.push(path)
 
     useEffect(() => {
@@ -15,14 +16,14 @@ const Home = (props) =>{
     return (
         <div>
             
-            { !document.cookie &&
+            { !cookie.sid &&
             <>
                 <h1 style={{fontStyle:"italic",textAlign:"center"}}>Please Login</h1>
             
             </>
             }
             {
-                document.cookie &&
+                cookie.sid &&
                 <>
 
                 <h1>おかえりなさい {props.user}</h1>

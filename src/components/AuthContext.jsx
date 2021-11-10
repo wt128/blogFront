@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState,useEffect } from "react"
+import { useCookies } from "react-cookie"
 
 const AuthUserContext = createContext(false)
 const AuthOperationContext = createContext({
@@ -9,9 +10,9 @@ const AuthOperationContext = createContext({
 const AuthUserProvider = ({children}) =>{
 
   const [authUser, setAuthUser] = useState(false)
-  
+  const [cookie] = useCookies(["sid"])
   useEffect(() => {
-    if(document.cookie){
+    if(cookie.sid){
       setAuthUser(true)
     }
     
