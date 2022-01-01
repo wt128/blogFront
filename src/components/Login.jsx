@@ -46,7 +46,7 @@ const Login = (props) => {
   
   function sendNew(e){
     e.preventDefault()
-    axios.post(`${process.env.REACT_APP_IP}session/create`,{
+    axios.post(`${process.env.REACT_APP_IP}/session/create`,{
       withCredentials: true,
       Email: email,
       Password: password,
